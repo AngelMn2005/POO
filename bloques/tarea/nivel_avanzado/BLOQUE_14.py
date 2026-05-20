@@ -1,0 +1,162 @@
+from core import Screen
+class Bloque_14():
+    # ==================================================
+    # PREGUNTA 1
+    # ==================================================
+
+    def b14question_1(self):
+
+        Screen.limpiar()
+
+        Screen.titulo("PREGUNTA 1")
+
+        print("""
+1. Desempaquetar:(10, 20, 30, 40)
+→ primera, *mitad, ultima
+    """)
+
+        # ==================================================
+        # TUPLA
+        # ==================================================
+
+        values = (10, 20, 30, 40)
+
+        # ==================================================
+        # UNPACKING
+        # ==================================================
+
+        first, *middle, last = values
+
+        # ==================================================
+        # RESPUESTA
+        # ==================================================
+
+        Screen.aviso("\nRESPUESTA:\n")
+
+        Screen.mostrar(f"""
+
+                RESULTADO
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    Tupla      : {values}
+
+    Primera    : {first}
+
+    Mitad      : {middle}
+
+    Ultima     : {last}
+
+
+    """)
+
+        Screen.pausa()
+    # ==================================================
+    # PREGUNTA 2
+    # ==================================================
+
+    def b14question_2(self):
+
+        Screen.limpiar()
+
+        Screen.titulo("PREGUNTA 2")
+
+        print("""
+2. Usa *lista para pasar [2,3,4] como argumentos.
+    """)
+
+        # ==================================================
+        # FUNCION
+        # ==================================================
+
+        def multiplicar(a, b, c):
+
+            return a * b * c
+
+        # ==================================================
+        # LISTA
+        # ==================================================
+
+        numbers = [2, 3, 4]
+
+        # ==================================================
+        # DESEMPAQUETAR
+        # ==================================================
+
+        result = multiplicar(*numbers)
+
+        # ==================================================
+        # RESPUESTA
+        # ==================================================
+
+        Screen.aviso("\nRESPUESTA:\n")
+
+        Screen.mostrar(f"""
+
+                RESULTADO
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    Lista      : {numbers}
+
+    Resultado  : {result}
+
+    """)
+
+        Screen.pausa()
+    # ==================================================
+    # PREGUNTA 3
+    # ==================================================
+
+    def b14question_3(self):
+
+        Screen.limpiar()
+
+        Screen.titulo("PREGUNTA 3")
+
+        print("""
+3. Combinar dos diccionarios usando ** sin sobrescribir el original.
+    """)
+
+        # ==================================================
+        # DICCIONARIOS
+        # ==================================================
+
+        data1 = {
+            "name": "Angel",
+            "age": 18
+        }
+
+        data2 = {
+            "city": "Milagro",
+            "country": "Ecuador"
+        }
+
+        # ==================================================
+        # COMBINAR
+        # ==================================================
+
+        result = {
+            **data1,
+            **data2
+        }
+
+        # ==================================================
+        # RESPUESTA
+        # ==================================================
+
+        Screen.aviso("\nRESPUESTA:\n")
+
+        Screen.mostrar(f"""
+
+                RESULTADO
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+    Diccionario 1 : {data1}
+
+    Diccionario 2 : {data2}
+
+    Combinado     : {result}
+
+
+    """)
+
+        Screen.pausa()
